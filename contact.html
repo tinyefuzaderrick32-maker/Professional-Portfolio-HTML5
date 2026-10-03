@@ -4,7 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Software Engineering Group</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      label {
+        font-weight: bold;
+        margin: 0;
+        flex: 0 0 90px;
+      }
+      label[for="message"] {
+        display: inline-block;
+        vertical-align: top;
+      }
+      input,
+      textarea {
+        flex: 1 1 200px;
+        width: auto;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 0.6rem;
+        border: 1px solid #999999;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 1rem;
+        vertical-align: top;
+      }
+      button {
+        margin-top: 1.5rem;
+        margin-left: 104px;
+      }
+    </style>
   </head>
   <body>
     <h1>Contact Us</h1>
