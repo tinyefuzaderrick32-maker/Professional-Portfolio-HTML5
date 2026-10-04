@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+label {
+  font-weight: bold;
+  margin: 0;
+  flex: 0 0 90px;
+}
+label[for="message"] {
+  display: inline-block;
+  vertical-align: top;
+}
+input,
+textarea {
+  flex: 1 1 200px;
+  width: auto;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 0.6rem;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  vertical-align: top;
+}
+button {
+  margin-top: 1.5rem;
+  margin-left: 104px;
+  margin-bottom: 2rem;
+}
+body h1 {
+  background-color: #161515;
+  color: white;
+  border: 1.5rem;
+  padding: 1rem;
+}
+footer {
+  background-color: #161515;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+form {
+  width: 100%;
+  max-width: 560px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+form input,
+form textarea {
+  width: calc(100% - 110px);
+  box-sizing: border-box;
+  padding: 0.6rem;
+  border: 1px solid #999999;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+  vertical-align: top;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+form textarea {
+  min-height: 5rem;
+  resize: none;
+  field-sizing: content;
+  overflow: hidden;
+}
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #161515;
+  box-shadow: 0 0 0 3px rgba(22, 21, 21, 0.25);
+}
+form button,
+form input[type="submit"] {
+  width: auto; /* stops the submit input from stretching like the other fields */
+  margin: 1.5rem 0 0 104px;
+  padding: 0.7rem 1.8rem;
+  background-color: #161515;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}

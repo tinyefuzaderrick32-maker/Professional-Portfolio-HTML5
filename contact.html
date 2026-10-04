@@ -4,62 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Software Engineering Group</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-      main {
-        flex: 1;
-        padding-bottom: 3rem;
-      }
-      label {
-        font-weight: bold;
-        margin: 0;
-        flex: 0 0 90px;
-      }
-      label[for="message"] {
-        display: inline-block;
-        vertical-align: top;
-      }
-      input,
-      textarea {
-        flex: 1 1 200px;
-        width: auto;
-        min-width: 0;
-        box-sizing: border-box;
-        padding: 0.6rem;
-        border: 1px solid #999999;
-        border-radius: 4px;
-        font-family: inherit;
-        font-size: 1rem;
-        vertical-align: top;
-      }
-      button {
-        margin-top: 1.5rem;
-        margin-left: 104px;
-        margin-bottom: 2rem;
-      }
-      body h1 {
-        background-color: #161515;
-        color: white;
-        border: 1.5rem;
-        padding: 1rem;
-      }
-      footer {
-        background-color: #161515;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-      }
-      footer a {
-        color: white;
-        text-decoration: none;
-      }
-    </style>
+    <link rel="stylesheet" href="styleContact.css" />
   </head>
   <body>
     <h1>Contact Us</h1>
@@ -70,7 +15,14 @@
     <form action="#" method="post">
       <p>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" autocomplete="name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Your Full Name "
+          autocomplete="name"
+          required
+        />
       </p>
       <p>
         <label for="email">Email:</label>
@@ -78,17 +30,30 @@
           type="email"
           id="email"
           name="email"
+          placeholder="e.g timcook@gmail.com"
           autocomplete="email"
           required
         />
       </p>
       <p>
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel" required />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value="+256"
+          autocomplete="tel"
+          required
+        />
       </p>
       <p>
         <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Type your message here..."
+          required
+        ></textarea>
       </p>
       <button type="submit">Send</button>
     </form>
