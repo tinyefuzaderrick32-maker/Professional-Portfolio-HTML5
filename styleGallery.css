@@ -1,0 +1,104 @@
+/* PAGE: full-height column */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header h2 {
+  background-color: #161515;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #161515;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* GALLERY MAIN: stack the two sections vertically, full width */
+main:has(figure) {
+  flex: 1; /* pushes the footer to the bottom */
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+/* BOTH SECTIONS: bordered boxes like the wireframe */
+main:has(figure) > section {
+  flex: none;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+main:has(figure) h3 {
+  margin: 0 0 1rem 0;
+}
+
+/* FIRST SECTION (images): three equal columns in one row */
+main:has(figure) > section:first-of-type {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(0, 1fr)
+  ); /* minmax(0, 1fr) stops a big photo from stretching its column */
+  gap: 1.5rem;
+}
+
+main:has(figure) > section:first-of-type h3 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* FIGURE: a column, so the caption always sits below the image and never on top of it */
+main figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main figure img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+main figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* SECOND SECTION (video): wide block under the photos */
+main:has(figure) > section:last-of-type video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* SMALL SCREENS: photos stack in one column */
+@media (max-width: 700px) {
+  main:has(figure) > section:first-of-type {
+    grid-template-columns: 1fr;
+  }
+}
