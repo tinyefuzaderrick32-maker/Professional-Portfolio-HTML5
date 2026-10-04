@@ -88,7 +88,7 @@ form textarea:focus {
 }
 form button,
 form input[type="submit"] {
-  width: auto; /* stops the submit input from stretching like the other fields */
+  width: auto;
   margin: 1.5rem 0 0 104px;
   padding: 0.7rem 1.8rem;
   background-color: #161515;
